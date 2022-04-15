@@ -1,15 +1,8 @@
 'use strict';
 module.exports = function(app) {
-  var productsCtrl = require('./controllers/ProductsController');
+  var vccCtrl = require('./controllers/VccController');
 
   // todoList Routes
-  app.route('/products')
-    .get(productsCtrl.get)
-    .post(productsCtrl.store);
-
-
-  app.route('/products/:productId')
-    .get(productsCtrl.detail)
-    .put(productsCtrl.update)
-    .delete(productsCtrl.delete);
-};
+  app.route('/api/vcc')
+    .get(vccCtrl.get);
+}
