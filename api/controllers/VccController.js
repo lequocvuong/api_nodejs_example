@@ -10,7 +10,7 @@ module.exports = {
             req.headers.authorization.split(" ")[0] === "Bearer"
           ) {
             var token = req.headers.authorization.split(" ")[1];
-            if(token == process.env.TOKEN) {
+            if(token == "N0dROyFMNCFqZ1M5MlJfdClKKzQ3Wyw5QV5VUWskV0o0JGd9aFcrXjJhWm53VEE2TSxUSHghNlYzbilGMlxYNg==") {
                 const query = req.query;
                 console.log(query);
                 const searchParams = new URLSearchParams(query);
