@@ -22,8 +22,8 @@ app.listen(port);
 console.log('RESTful API server started on: ' + port);
 
 const jobSyncVcc = new cron.CronJob({
-    // run every 1 minute
-    cronTime: "0 */1 * * * *",
+    // run every 2 minute
+    cronTime: "0 */2 * * * *",
     // run every 10 second
     // cronTime: "*/10 * * * * *",
     onTick: function () {
