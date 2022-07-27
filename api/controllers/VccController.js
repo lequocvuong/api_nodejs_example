@@ -3,6 +3,7 @@
 const axios = require('axios')
 
 module.exports = {
+    /*
     get: (req, res) => {
         if (
             req.headers &&
@@ -42,5 +43,6 @@ module.exports = {
         }
         
     }
+    */
     
 }

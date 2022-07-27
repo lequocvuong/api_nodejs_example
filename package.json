@@ -1,22 +1,30 @@
 {
-  "name": "api_nodejs",
+  "name": "medon-vcc",
   "version": "1.0.0",
-  "description": "",
+  "description": "cron job sync vcc call log to medon",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "dev": "nodemon index.js",
+    "dev:https": "nodemon src/index.js --key sslcert/server.key --cert sslcert/server.cert",
+    "start": "node index.js",
+    "build": "npm run clean && cp -r src dist/src && cp -r bin dist/bin && cp *.yml dist && cp *.yaml dist && cp *.json dist && cp README.md dist && cp LICENSE dist",
+    "clean": "rimraf dist && mkdirp dist"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "vuongle",
+  "license": "",
   "devDependencies": {
     "nodemon": "^1.17.5"
   },
   "dependencies": {
     "axios": "^0.26.1",
+    "cron": "^2.1.0",
     "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "http-errors": "^1.6.3",
-    "util": "^0.10.3"
+    "kafkajs": "^2.1.0",
+    "moment": "^2.29.4",
+    "moment-timezone": "^0.5.34",
+    "pg": "^8.7.3",
+    "pg-promise": "^10.11.1"
   }
 }
