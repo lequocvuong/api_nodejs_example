@@ -21,22 +21,22 @@ app.use(function(req, res) {
 app.listen(port);
 console.log('RESTful API server started on: ' + port);
 
-// const jobSyncVcc = new cron.CronJob({
-//     // run every 1 minute
-//     cronTime: "0 */1 * * * *",
-//     // run every 10 second
-//     // cronTime: "*/10 * * * * *",
-//     onTick: function () {
-//         vccService.getDataList();
-//     },
-//     start: true,
-//     timeZone: "Asia/Ho_Chi_Minh",
-// });
-// jobSyncVcc.start();
+const jobSyncVcc = new cron.CronJob({
+    // run every 1 minute
+    cronTime: "0 */1 * * * *",
+    // run every 10 second
+    // cronTime: "*/10 * * * * *",
+    onTick: function () {
+        vccService.getDataList();
+    },
+    start: true,
+    timeZone: "Asia/Ho_Chi_Minh",
+});
+jobSyncVcc.start();
 
 const jobSyncMissVcc = new cron.CronJob({
     // run every 5 minute
-    cronTime: "0 */1 * * * *",
+    cronTime: "0 */5 * * * *",
     // run every 10 second
     // cronTime: "*/10 * * * * *",
     onTick: function () {
