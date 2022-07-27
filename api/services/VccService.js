@@ -38,7 +38,7 @@ async function getDataList() {
 
         await sleep(3000);
     }
-    await producer.disconnect();
+    // await producer.disconnect();
 }
 
 async function getDataMissList() {
@@ -68,7 +68,7 @@ async function getDataMissList() {
 
         await sleep(3000);
     }
-    await producer.disconnect();
+    // await producer.disconnect();
 }
 
 async function getVccData(url, startTimeSince, startTimeTo, pageIdx, callType, callStatus) {
