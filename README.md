@@ -10,4 +10,4 @@ Run `npm run start`
 
 # build docker
 
-docker run -it --rm -d -p 3000:3000 --name medon-vcc-sync lequocvuong/medon-vcc-sync:dev
+docker run -it --rm -d -p 4000:4000 --name medon-vcc-sync lequocvuong/medon-vcc-sync:dev
