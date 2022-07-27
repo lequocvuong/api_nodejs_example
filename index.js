@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const vccService = require("./api/services/VccService");
 
 require('dotenv').load();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
