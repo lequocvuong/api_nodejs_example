@@ -73,7 +73,7 @@ async function getDataMissList() {
 
 async function getVccData(url, startTimeSince, startTimeTo, pageIdx, callType, callStatus) {
     try {
-        url = url + 'start_time_since=' + startTimeSince + '&start_time_to=' + startTimeTo + '&page=' + pageIdx + '&count=500'; 
+        url = url + 'start_time_since=' + startTimeSince + '&start_time_to=' + startTimeTo + '&page=' + pageIdx + '&count=50'; 
         if(callType) url = url + '&call_type=' + callType;
         if(callStatus) url = url + '&call_status=' + callStatus;
         console.log('url: ' + url);
